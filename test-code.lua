@@ -8,7 +8,7 @@
 ------------MOD CODE -------------------------
 
 
-sendDebugMessage("Launching Negate Texture Pack!")
+sendDebugMessage("MY BALLS! MY BALLS!!!!")
 
 
 ----------------------------------------------
