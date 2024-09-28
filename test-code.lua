@@ -10,6 +10,8 @@
 
 sendDebugMessage("MY BALLS! MY BALLS!!!!")
 
+SMODS.Atlas{key = "Tarots", path = "TarotsNew.png", px = 71, py = 95, prefix_config = { key = false } }
+
 
 ----------------------------------------------
 ------------MOD CODE END----------------------
