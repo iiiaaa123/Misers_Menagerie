@@ -6,7 +6,7 @@
 
 ----------------------------------------------
 ------------MOD CODE -------------------------
-sendDebugMessage("MY BALLS! MY BALLS!!!!")
+sendDebugMessage("MY BALLS! MY BALLS!!!! HELP MY BALLS ARE EXPLODING AGYWVDUJWGVDWHJGBJDXHVDJHVFUGBEDHJGBVDGVCBJMHVFDJHDSVJD")
 
 SMODS.Atlas{
     key = 'Tarot',
