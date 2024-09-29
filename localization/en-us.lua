@@ -1,7 +1,7 @@
 return {
     misc = {
         dictionary = {
-            k_nope_ex = "[Aw Dangit!]",
+            k_nope_ex = "Aw Dangit!",
         }
     }
 }
