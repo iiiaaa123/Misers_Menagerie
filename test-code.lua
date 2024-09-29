@@ -15,5 +15,11 @@ SMODS.Atlas{
     py = 95,
     prefix_config = { key = false }
 }
+
+SMODS.Atlas({
+	key = "modicon",
+	path = "miser_icon.png",
+	px = 32,
+	py = 32,
 ----------------------------------------------
 ------------MOD CODE END----------------------
