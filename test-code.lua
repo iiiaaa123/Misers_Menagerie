@@ -22,13 +22,5 @@ SMODS.Atlas({
 	px = 32,
 	py = 32,
 }):register()
-
-return {
-    misc = {
-        dictionary = {
-            k_nope_ex = "[Aw Dangit!]",
-        }
-    }
-}
 ----------------------------------------------
 ------------MOD CODE END----------------------
