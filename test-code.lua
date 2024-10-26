@@ -22,5 +22,24 @@ SMODS.Atlas({
 	px = 32,
 	py = 32,
 }):register()
+
+SMODS.Joker {
+	key = 'vikram',
+	loc_txt = {
+		name = 'Vikram Aquasi',
+		text = {
+      			"Looks at you {C:attention}weird{}.",
+      			"That's it. Nothing else.",
+      			"...",
+      			"{s:1.5}Stop staring!{}",
+   		 }
+	},
+	config = { extra = {} },
+	rarity = 1,
+	atlas = 'TestinStuffJokers',
+	pos = { x = 0, y = 0 },
+	soul_pos = { x = 1, y = 0 },
+	cost = 4,
+}
 ----------------------------------------------
 ------------MOD CODE END----------------------
