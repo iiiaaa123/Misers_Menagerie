@@ -24,8 +24,8 @@ SMODS.Atlas({
 }):register()
 
 SMODS.Atlas {
-  key = "TestinStuffJokers",
-  path = "TestinStuffJokers.png",
+  key = "MisersMenagerieJokers",
+  path = "MisersMenagerieJokers.png",
   px = 71,
   py = 95
 }
@@ -43,7 +43,7 @@ SMODS.Joker {
 	},
 	config = { extra = {} },
 	rarity = 1,
-	atlas = 'TestinStuffJokers',
+	atlas = 'MisersMenagerieJokers',
 	pos = { x = 0, y = 0 },
 	soul_pos = { x = 1, y = 0 },
 	cost = 4,
