@@ -1,8 +1,8 @@
 --- STEAMODDED HEADER
---- MOD_NAME: Testin Stuff
---- MOD_ID: TestinStuff
+--- MOD_NAME: Miser's Menagerie
+--- MOD_ID: MisersMenagerie
 --- MOD_AUTHOR: [Miser]
---- MOD_DESCRIPTION: This Mod tests stuff!
+--- MOD_DESCRIPTION: This Mod is filled with a bunch of stupid stuff!
 
 ----------------------------------------------
 ------------MOD CODE -------------------------
