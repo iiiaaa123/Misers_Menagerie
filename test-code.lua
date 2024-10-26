@@ -23,6 +23,13 @@ SMODS.Atlas({
 	py = 32,
 }):register()
 
+SMODS.Atlas {
+  key = "TestinStuffJokers",
+  path = "TestinStuffJokers.png",
+  px = 71,
+  py = 95
+}
+
 SMODS.Joker {
 	key = 'vikram',
 	loc_txt = {
