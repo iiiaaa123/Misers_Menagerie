@@ -3,7 +3,7 @@
 --- MOD_ID: MisersMenagerie
 --- MOD_AUTHOR: [Miser]
 --- MOD_DESCRIPTION: This Mod is filled with a bunch of stupid stuff!
---- PRIORITY: 1
+--- PRIORITY: -100000
 
 ----------------------------------------------
 ------------MOD CODE -------------------------
