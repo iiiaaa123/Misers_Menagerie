@@ -16,6 +16,14 @@ SMODS.Atlas{
     prefix_config = { key = false }
 }
 
+SMODS.Atlas{
+    key = 'Joker',
+    path = 'Jokers.png',
+    px = 71,
+    py = 95,
+    prefix_config = { key = false }
+}
+
 SMODS.Atlas({
 	key = "modicon",
 	path = "ModIcon.png",
