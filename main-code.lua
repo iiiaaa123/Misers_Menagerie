@@ -43,18 +43,37 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Vikram Aquasi',
 		text = {
-      			"Looks at you {C:attention}weird{}.",
-      			"That's it. Nothing else.",
-      			"...",
-      			"{s:1.5}Stop staring!{}",
+      			"This Joker gains{C:mult}+#1# {} Mult",
+      			"For every 3 played.",
+      			"{s:0.8}(not scored, take that hack fans){}",
+      			"{s:0.5}Really likes space too...{}",
    		 }
 	},
-	config = { extra = {} },
+	config = { extra = { mult = 5 } },
 	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 0, y = 0 },
 	soul_pos = { x = 1, y = 0 },
 	cost = 4,
+}
+
+SMODS.Joker {
+	key = 'page',
+	loc_txt = {
+		name = 'The Page of Space',
+		text = {
+      			"This Joker gains {X:mult,C:white} X#1# {} Mult",
+      			"For every {C:attention}3{} played.",
+      			"{s:0.8}(still not scored, hack fans in shambles){}",
+      			"{s:1.5,C:green}The Page of Space has Awoken.{}",
+   		 }
+	},
+	config = { extra = { Xmult = 1.5 } },
+	rarity = 4,
+	atlas = 'MisersMenagerieJokers',
+	pos = { x = 0, y = 0 },
+	soul_pos = { x = 1, y = 0 },
+	cost = 20,
 }
 ----------------------------------------------
 ------------MOD CODE END----------------------
