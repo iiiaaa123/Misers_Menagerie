@@ -44,7 +44,7 @@ SMODS.Joker {
 		name = 'Vikram Aquasi',
 		text = {
       			"This Joker gains {C:mult}+#1# {} Mult",
-      			"For every 3 played.",
+      			"For every {C:attention}3{} played.",
       			"{s:0.8}(not scored, take that hack fans){}",
       			"{s:0.5}Really likes space too...{}",
    		 }
@@ -52,7 +52,7 @@ SMODS.Joker {
 	config = { extra = { mult = 5 } },
 		loc_vars = function(self, info_queue, card)
     		return { vars = { card.ability.extra.mult } }
-  		end
+  		end,
 	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 0, y = 0 },
@@ -73,8 +73,8 @@ SMODS.Joker {
 	},
 	config = { extra = { Xmult = 1.5 } },
 		loc_vars = function(self, info_queue, card)
-    		return { vars = { card.ability.extra.mult } }
-  		end
+    		return { vars = { card.ability.extra.Xmult } }
+  		end,
 	rarity = 4,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 2, y = 0 },
