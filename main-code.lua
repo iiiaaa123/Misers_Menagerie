@@ -43,7 +43,7 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Vikram Aquasi',
 		text = {
-      			"This Joker gains {C:mult}+#1# {} Mult",
+      			"This Joker gains {C:mult}+#1#{} Mult",
       			"For every {C:attention}3{} played.",
       			"{s:0.8}(not scored, take that hack fans){}",
       			"{s:0.5}Really likes space too...{}",
