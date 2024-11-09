@@ -57,7 +57,7 @@ SMODS.Joker {
 	soul_pos = { x = 1, y = 0 },
 	cost = 4,
 	loc_vars = function(self, info_queue, card)
-    	return { vars = { card.ability.extra.mult } }
+    	return { vars = { card.ability.extra.mult, card.ability.extra.mult_mod } }
   	end,
 	calculate = function(self, card, context)
 	if context.joker_main then
