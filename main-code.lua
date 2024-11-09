@@ -71,8 +71,8 @@ SMODS.Joker {
 	config = { extra = { Xmult = 1.5 } },
 	rarity = 4,
 	atlas = 'MisersMenagerieJokers',
-	pos = { x = 0, y = 0 },
-	soul_pos = { x = 1, y = 0 },
+	pos = { x = 2, y = 0 },
+	soul_pos = { x = 3, y = 0 },
 	cost = 20,
 }
 ----------------------------------------------
