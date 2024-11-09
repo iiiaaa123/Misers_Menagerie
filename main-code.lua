@@ -50,7 +50,7 @@ SMODS.Joker {
       			"{s:0.5}Really likes space too...{}",
    		 }
 	},
-	config = { extra = { mult = 0, mult_gain = 5 } },
+	config = { extra = { mult = 0, mult_mod = 5 } },
 	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 0, y = 0 },
@@ -67,7 +67,7 @@ SMODS.Joker {
 	      	}
    	end
 	if context.before and next(context.other_card:get_id() == 3) and not context.blueprint then
-		card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
+		card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
       		return {
       		message = 'Upgraded!',
         	colour = G.C.MULT,
