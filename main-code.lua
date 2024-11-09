@@ -6,7 +6,7 @@
 
 ----------------------------------------------
 ------------MOD CODE -------------------------
-sendDebugMessage("MY BALLS! MY BALLS!!!! HELP MY BALLS ARE EXPLODING AGYWVDUJWGVDWHJGBJDXHVDJHVFUGBEDHJGBVDGVCBJMHVFDJHDSVJD")
+sendDebugMessage("no way is that a Miser's Menagerie reference vikram is my favorite troll yo page yo page yo page yo page my brain is melting help")
 
 SMODS.Atlas{
     key = 'Tarot',
@@ -66,7 +66,7 @@ SMODS.Joker {
 		        message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
 	      	}
    	end
-	if context.before and next(context.other_card:get_id() == 3) and not context.blueprint then
+	if context.before and context.other_card:get_id() == 3 and not context.blueprint then
 		card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
       		return {
       		message = 'Upgraded!',
