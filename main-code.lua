@@ -43,21 +43,37 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Vikram Aquasi',
 		text = {
-      			"This Joker gains {C:mult}+#1#{} Mult",
+      			"This Joker gains {C:mult}+#2#{} Mult",
       			"For every {C:attention}3{} played.",
       			"{s:0.8}(not scored, take that hack fans){}",
+			"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
       			"{s:0.5}Really likes space too...{}",
    		 }
 	},
-	config = { extra = { mult = 5 } },
-		loc_vars = function(self, info_queue, card)
-    		return { vars = { card.ability.extra.mult } }
-  		end,
+	config = { extra = { mult = 0, mult_gain = 5 } },
 	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 0, y = 0 },
 	soul_pos = { x = 1, y = 0 },
 	cost = 4,
+	loc_vars = function(self, info_queue, card)
+    	return { vars = { card.ability.extra.mult } }
+  	end,
+	if context.joker_main then
+      		return {
+			chip_mod = card.ability.extra.mult,
+		        message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
+	      	}
+   	end
+	if context.before and next(context.other_card:get_id() == 3) and not context.blueprint then
+		card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
+      		return {
+      		message = 'Upgraded!',
+        	colour = G.C.MULT,
+		card = card
+		}
+	end
+end
 }
 
 SMODS.Joker {
