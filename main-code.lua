@@ -75,7 +75,7 @@ SMODS.Joker {
 	card = card
 	}
 end
-}
+		}
 end
 
 
