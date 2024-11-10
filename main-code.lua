@@ -95,7 +95,7 @@ SMODS.Joker {
       			"{s:1.5,C:green}The Page of Space has Awoken.{}",
    		 }
 	},
-	config = { extra = { xmult = 1, Xmult_mod = 0.5 } },
+	config = { extra = { x_mult = 1, Xmult_mod = 0.5 } },
 	rarity = 4,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 2, y = 0 },
