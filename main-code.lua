@@ -91,11 +91,11 @@ SMODS.Joker {
       			"This Joker gains {X:mult,C:white} X#2# {} Mult",
       			"For every {C:attention}3{} played.",
       			"{s:0.8}(still not scored, hack fans in shambles){}",
-		"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+		"{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
       			"{s:1.5,C:green}The Page of Space has Awoken.{}",
    		 }
 	},
-	config = { extra = { xmult = 0, Xmult_mod = 0.5 } },
+	config = { extra = { xmult = 1, Xmult_mod = 0.5 } },
 	rarity = 4,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 2, y = 0 },
