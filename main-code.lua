@@ -65,7 +65,7 @@ SMODS.Joker {
 		        message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
 	      	}
    	end
-	if context.before and context.cardarea == G.play and not context.blueprint then
+	if context.before and context.cardarea == G.play and context.individual and not context.blueprint then
 		local rank = SMODS.Ranks[context.other_card.base.value].key
 			if rank == "3" then
 				card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
@@ -74,8 +74,8 @@ SMODS.Joker {
         colour = G.C.MULT,
 	card = card
 	}
-			end
 		end
+	end
 end
 }
 
