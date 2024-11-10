@@ -65,7 +65,7 @@ SMODS.Joker {
 		        message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
 	      	}
    	end
-	if context.before and context.cardarea == G.play and context.individual and not context.blueprint then
+	if context.before and context.individual and not context.blueprint then
 		local rank = SMODS.Ranks[context.other_card.base.value].key
 			if rank == "3" then
 				card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
@@ -91,7 +91,7 @@ SMODS.Joker {
       			"{s:1.5,C:green}The Page of Space has Awoken.{}",
    		 }
 	},
-	config = { extra = { Xmult = 1.5 } },
+	config = { extra = { Xmult = 0.5 } },
 		loc_vars = function(self, info_queue, card)
     		return { vars = { card.ability.extra.Xmult } }
   		end,
