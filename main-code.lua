@@ -45,7 +45,7 @@ SMODS.Joker {
       			"This Joker gains {C:mult}+#2#{} Mult",
       			"For every {C:attention}3{} played.",
       			"{s:0.8}(not scored, take that hack fans){}",
-			"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+		"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
       			"{s:0.5}Really likes space too...{}",
    		 }
 	},
@@ -56,29 +56,32 @@ SMODS.Joker {
 	soul_pos = { x = 1, y = 0 },
 	cost = 4,
 	loc_vars = function(self, info_queue, card)
-    	return { vars = { card.ability.extra.mult, card.ability.extra.mult_mod } }
+    		return { vars = { card.ability.extra.mult, card.ability.extra.mult_mod } }
   	end,
 	calculate = function(self, card, context)
-	if context.joker_main then
+		if context.before then
+			for k, _ in ipairs(context.full_hand) do
+				print(context.full_hand[k].base.value)
+				if context.full_hand[k]:get_id() == 3 then
+					card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
+					context.full_hand[k]:juice_up(0.7)
+					G.E_MANAGER:add_event(Event({
+						func = function()
+							card:juice_up(0.7)
+							card_eval_status_text(card,'extra',nil ,nil ,nil,{message = "Upgraded", colour = G.C.MULT, instant = true})
+							play_sound('Chips2')
+						return true; end}))
+					end
+				end
+			end
+		if context.joker_main then
       		return {
 			mult_mod = card.ability.extra.mult,
 		        message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
-	      	}
-   	end
-	if context.before and context.cardarea == G.play and context.individual and not context.blueprint then
-		local rank = SMODS.Ranks[context.other_card.base.value].key
-			if rank == "3" then
-				card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
-      			return {
-      	message = 'Upgraded!',
-        colour = G.C.MULT,
-	card = card
-	}
-		end
+	      		}
+   		end
 	end
-end
 }
-
 
 SMODS.Joker {
 	key = 'page',
