@@ -71,11 +71,10 @@ SMODS.Joker {
 			if rank == "3" then
 				card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
       			return {
-      		message = 'Upgraded!',
-        	colour = G.C.MULT,
-		card = card
-		}
-	end
+      	message = 'Upgraded!',
+        colour = G.C.MULT,
+	card = card
+	}
 }
 
 SMODS.Joker {
