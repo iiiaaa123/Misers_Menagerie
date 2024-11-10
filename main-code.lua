@@ -88,21 +88,44 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'The Page of Space',
 		text = {
-      			"This Joker gains {X:mult,C:white} X#1# {} Mult",
+      			"This Joker gains {X:mult,C:white} X#2# {} Mult",
       			"For every {C:attention}3{} played.",
       			"{s:0.8}(still not scored, hack fans in shambles){}",
+		"{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
       			"{s:1.5,C:green}The Page of Space has Awoken.{}",
    		 }
 	},
-	config = { extra = { Xmult = 0.5 } },
-		loc_vars = function(self, info_queue, card)
-    		return { vars = { card.ability.extra.Xmult } }
-  		end,
+	config = { extra = { xmult = 0, Xmult_mod = 0.5 } },
 	rarity = 4,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 2, y = 0 },
 	soul_pos = { x = 3, y = 0 },
 	cost = 20,
+	loc_vars = function(self, info_queue, card)
+    		return { vars = { card.ability.extra.x_mult, card.ability.extra.Xmult_mod } }
+  	end,
+	calculate = function(self, card, context)
+		if context.before then
+			for k, _ in ipairs(context.full_hand) do
+				if context.full_hand[k]:get_id() == 3 then
+					card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
+					context.full_hand[k]:juice_up(0.7)
+					G.E_MANAGER:add_event(Event({
+						func = function()
+							card:juice_up(0.7)
+							card_eval_status_text(card,'extra',nil ,nil ,nil,{message = "Upgraded", colour = G.C.MULT, instant = true})
+							play_sound('chips2')
+						return true; end}))
+					end
+				end
+			end
+		if context.joker_main then
+      		return {
+			mult_mod = card.ability.extra.mult,
+		        message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
+	      		}
+   		end
+	end
 }
 ----------------------------------------------
 ------------MOD CODE END----------------------
