@@ -108,7 +108,7 @@ SMODS.Joker {
 		if context.before then
 			for k, _ in ipairs(context.full_hand) do
 				if context.full_hand[k]:get_id() == 3 then
-					card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
+					card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.Xmult_mod
 					context.full_hand[k]:juice_up(0.7)
 					G.E_MANAGER:add_event(Event({
 						func = function()
@@ -122,7 +122,7 @@ SMODS.Joker {
 		if context.joker_main then
       		return {
 			mult_mod = card.ability.extra.mult,
-		        message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
+		        message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.x_mult } }
 	      		}
    		end
 	end
