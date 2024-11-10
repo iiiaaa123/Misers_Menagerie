@@ -69,7 +69,7 @@ SMODS.Joker {
 						func = function()
 							card:juice_up(0.7)
 							card_eval_status_text(card,'extra',nil ,nil ,nil,{message = "Upgraded", colour = G.C.MULT, instant = true})
-							play_sound('Chips2')
+							play_sound('chips2')
 						return true; end}))
 					end
 				end
