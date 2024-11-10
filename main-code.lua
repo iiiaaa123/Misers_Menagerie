@@ -61,7 +61,6 @@ SMODS.Joker {
 	calculate = function(self, card, context)
 		if context.before then
 			for k, _ in ipairs(context.full_hand) do
-				print(context.full_hand[k].base.value)
 				if context.full_hand[k]:get_id() == 3 then
 					card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
 					context.full_hand[k]:juice_up(0.7)
