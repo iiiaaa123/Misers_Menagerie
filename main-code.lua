@@ -120,7 +120,7 @@ SMODS.Joker {
 			end
 		if context.joker_main then
       		return {
-			mult_mod = card.ability.extra.mult,
+			Xmult_mod = card.ability.extra.x_mult,
 		        message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.x_mult } }
 	      		}
    		end
