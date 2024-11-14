@@ -142,7 +142,7 @@ SMODS.Joker {
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 4, y = 0 },
 	soul_pos = { x = 5, y = 0},
-	cost = 4
+	cost = 4,
 	loc_vars = function(self, info_queue, card)
     		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod } }
   	end,
