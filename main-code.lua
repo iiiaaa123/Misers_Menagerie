@@ -157,6 +157,7 @@ SMODS.Joker {
 						colour = G.C.RED,
 						card = card,
 					}
+				end
 			end
 	calculate = function(self, card, context)
 		local check = true
