@@ -151,7 +151,7 @@ SMODS.Joker {
 	calculate = function(self, card, context)
 		if context.cardarea == G.play and context.individual then
 			local rank = SMODS.Ranks[context.other_card.base.value].key
-				if not v:norankorsuit() and v:get_id() == 14 and v:is_suit('Spades') then
+				if v:get_id() == 14 and v:is_suit('Spades') then
 					return {
 						x_mult = card.ability.extra.xmult,
 						colour = G.C.RED,
