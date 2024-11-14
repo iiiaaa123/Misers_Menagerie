@@ -130,7 +130,7 @@ SMODS.Joker {
 SMODS.Joker {
 	key = 'loswig',
 	loc_txt = {
-		name = 'Loswig'
+		name = 'Loswig',
 		text = {
 			"This Joker gains {C:chips}+#2#{} Chips",
 			"if hand contains only {C:attention}Aces, 4s or 9s{}.",
