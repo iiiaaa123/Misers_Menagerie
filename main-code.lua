@@ -49,12 +49,12 @@ SMODS.Joker {
       			"{s:0.5}Really likes space too...{}",
    		 }
 	},
-	config = { extra = { mult = 0, mult_mod = 5 } },
-	rarity = 1,
+	config = { extra = { mult = 0, mult_mod = 3 } },
+	rarity = 2,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 0, y = 0 },
 	soul_pos = { x = 1, y = 0 },
-	cost = 4,
+	cost = 6,
 	loc_vars = function(self, info_queue, card)
     		return { vars = { card.ability.extra.mult, card.ability.extra.mult_mod } }
   	end,
@@ -67,7 +67,7 @@ SMODS.Joker {
 					G.E_MANAGER:add_event(Event({
 						func = function()
 							card:juice_up(0.7)
-							card_eval_status_text(card,'extra',nil ,nil ,nil,{message = "Upgraded", colour = G.C.MULT, instant = true})
+							card_eval_status_text(card,'extra', nil, nil, nil, {message = localize("k_upgrade_ex"), colour = G.C.MULT, instant = true})
 							play_sound('chips2')
 						return true; end}))
 					end
@@ -112,7 +112,7 @@ SMODS.Joker {
 					G.E_MANAGER:add_event(Event({
 						func = function()
 							card:juice_up(0.7)
-							card_eval_status_text(card,'extra',nil ,nil ,nil,{message = "Upgraded", colour = G.C.MULT, instant = true})
+							card_eval_status_text(card,'extra', nil, nil, nil, {message = localize("k_upgrade_ex"), colour = G.C.MULT, instant = true})
 							play_sound('chips2')
 						return true; end}))
 					end
@@ -124,6 +124,56 @@ SMODS.Joker {
 		        message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.x_mult } }
 	      		}
    		end
+	end
+}
+
+SMODS.Joker {
+	key = 'loswig',
+	loc_txt = {
+		name = 'Loswig'
+		text = {
+			"This Joker gains {C:chips}+#2#{} Chips",
+			"if hand contains only {C:attention}Aces, 4s or 9s{}.",
+		"{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
+		}
+	},
+	config = { extra = { chips = 0, chip_mod = 10 } },
+	rarity = 1,
+	atlas = 'MisersMenagerieJokers',
+	pos = { x = 4, y = 0 },
+	soul_pos = { x = 5, y = 0},
+	cost = 4
+	loc_vars = function(self, info_queue, card)
+    		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod } }
+  	end,
+	calculate = function(self, card, context)
+		local check = true
+		if context.cardarea == G.jokers and context.before and not context.blueprint then
+			if context.scoring_hand then
+				for k, v in ipairs(context.full_hand) do
+					if
+						v:get_id() == 2
+						or v:get_id() == 3
+						or v:get_id() == 5
+						or v:get_id() == 6
+						or v:get_id() == 7
+						or v:get_id() == 8
+						or v:get_id() == 10
+						or v:get_id() == 11
+						or v:get_id() == 12
+						or v:get_id() == 13
+					then
+						check = false
+					end
+				end
+			end
+			if check then
+				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
+				return {
+				card_eval_status_text(card, "extra", nil, nil, nil, {message = localize("k_upgrade_ex"), colour = G.C.CHIPS, instant = true
+				}),
+			}
+		end
 	end
 }
 ----------------------------------------------
