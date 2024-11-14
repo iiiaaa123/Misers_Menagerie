@@ -135,17 +135,29 @@ SMODS.Joker {
 			"This Joker gains {C:chips}+#2#{} Chips",
 			"if hand contains only {C:attention}Aces, 4s or 9s{}.",
 		"{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
+			"For some reason too, {X:mult,C:white} X#3# {} Mult when",
+			"an Ace of Spades is scored... {s:0.5}Why?{}",
 		}
 	},
-	config = { extra = { chips = 0, chip_mod = 10 } },
+	config = { extra = { chips = 0, chip_mod = 10, x_mult = 2} },
 	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 4, y = 0 },
 	soul_pos = { x = 5, y = 0},
 	cost = 4,
 	loc_vars = function(self, info_queue, card)
-    		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod } }
+    		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
   	end,
+	calculate = function(self, card, context)
+		if context.cardarea == G.play and context.individual then
+			local rank = SMODS.Ranks[context.other_card.base.value].key
+				if not v:norankorsuit() and v:get_id() == 14 and v:is_suit('Spades') then
+					return {
+						x_mult = card.ability.extra.xmult,
+						colour = G.C.RED,
+						card = card,
+					}
+			end
 	calculate = function(self, card, context)
 		local check = true
 		if context.cardarea == G.jokers and context.before and not context.blueprint then
