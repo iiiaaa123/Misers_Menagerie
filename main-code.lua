@@ -187,12 +187,12 @@ SMODS.Joker {
 					}),
 				}
 			end
-		if context.joker_main then
-      		return {
-			chip_mod = card.ability.extra.chips,
-		        message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chips } }
-	      		}
 		end
+	if context.joker_main then
+     	return {
+		chip_mod = card.ability.extra.chips,
+	        message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chips } }
+	      	}
 	end
 end
 }
