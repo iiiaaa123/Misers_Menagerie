@@ -151,14 +151,15 @@ SMODS.Joker {
 	calculate = function(self, card, context)
 		if context.cardarea == G.play and context.individual then
 			local rank = SMODS.Ranks[context.other_card.base.value].key
-				if rank == "14" and is_suit('Spades') then
-					return {
-						x_mult = card.ability.extra.x_mult,
-						colour = G.C.RED,
-						card = card,
-					}
-				end
+			if rank == "14" and suit == "Spades" then
+				return {
+					x_mult = card.ability.extra.xmult,
+					colour = G.C.RED,
+					card = card,
+				}
+			end
 		end
+	end
 	calculate = function(self, card, context)
 		local check = true
 		if context.cardarea == G.jokers and context.before and not context.blueprint then
@@ -182,19 +183,15 @@ SMODS.Joker {
 			end
 			if check then
 				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
-					return {
-					card_eval_status_text(card, "extra", nil, nil, nil, {message = localize("k_upgrade_ex"), colour = G.C.CHIPS, instant = true
+				return {
+					card_eval_status_text(card, "extra", nil, nil, nil, {
+						message = localize("k_upgrade_ex"),
+						colour = G.C.CHIPS,
 					}),
 				}
 			end
 		end
-	if context.joker_main then
-     	return {
-		chip_mod = card.ability.extra.chips,
-	        message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chips } }
-	      	}
 	end
-end
 }
 ----------------------------------------------
 ------------MOD CODE END----------------------
