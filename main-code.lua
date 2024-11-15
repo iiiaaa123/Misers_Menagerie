@@ -153,7 +153,7 @@ SMODS.Joker {
 			local rank = SMODS.Ranks[context.other_card.base.value].key
 			if rank == "14" and is_suit('Spades') then
 				return {
-					x_mult = card.ability.extra.xmult,
+					x_mult = card.ability.extra.x_mult,
 					colour = G.C.RED,
 					card = card,
 				}
