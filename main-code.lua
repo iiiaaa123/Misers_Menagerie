@@ -140,18 +140,18 @@ SMODS.Joker {
 		}
 	},
 	config = { extra = { chips = 0, chip_mod = 10, x_mult = 2} },
-	rarity = 1,
+	rarity = 2,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 4, y = 0 },
 	soul_pos = { x = 5, y = 0},
-	cost = 4,
+	cost = 6,
 	loc_vars = function(self, info_queue, card)
     		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
   	end,
 	calculate = function(self, card, context)
 		if context.cardarea == G.play and context.individual then
 			local rank = SMODS.Ranks[context.other_card.base.value].key
-			if rank == "14" and is_suit('Spades') then
+			if rank == "14" and context.other_card:is_suit('Spades') then
 				return {
 					x_mult = card.ability.extra.x_mult,
 					colour = G.C.RED,
