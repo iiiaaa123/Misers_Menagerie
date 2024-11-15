@@ -159,7 +159,7 @@ SMODS.Joker {
 				}
 			end
 		end
-	end
+	end,
 	calculate = function(self, card, context)
 		local check = true
 		if context.cardarea == G.jokers and context.before and not context.blueprint then
