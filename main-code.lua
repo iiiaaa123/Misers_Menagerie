@@ -149,6 +149,7 @@ SMODS.Joker {
     		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
   	end,
 	calculate = function(self, card, context)
+		local check = true
 		if context.cardarea == G.play and context.individual and context.other_card:is_suit('Spades') then
 			if rank == "14" then
 				return {
