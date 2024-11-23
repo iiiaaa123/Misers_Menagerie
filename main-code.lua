@@ -2,7 +2,7 @@
 --- MOD_NAME: Miser's Menagerie
 --- MOD_ID: MisersMenagerie
 --- MOD_AUTHOR: [Miser]
---- MOD_DESCRIPTION: This Mod is filled with a bunch of stupid stuff. I coded the "Aw Dangit" text and the new Vikram cards (with a lot of help from elbebeta of the balatro discord), along with making art for both, and a friend Pupco made the art for Tiff-Taff, Oops All Blover and Pupperton Company.
+--- MOD_DESCRIPTION: This Mod is filled with a bunch of stupid stuff. I coded the "Aw Dangit" text and most of the new Jokers (with a lot of help from elbebeta of the balatro discord and my pal Something Funny), along with making art for both, and a friend Pupco made the art for Tiff-Taff, Oops All Blover and Pupperton Company.
 ----------------------------------------------
 ------------MOD CODE -------------------------
 sendDebugMessage("no way is that a Miser's Menagerie reference vikram is my favorite troll yo page yo page yo page yo page my brain is melting help")
