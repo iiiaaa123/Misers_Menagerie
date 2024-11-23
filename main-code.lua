@@ -230,10 +230,9 @@ SMODS.Joker {
 			if check then
 				mult = card.ability.extra.mult
 				return {
-					card_eval_status_text(card, "extra", nil, nil, nil, {
-						colour = G.C.MULT,
-						card = card
-					}),
+					mult = card.ability.extra.mult,
+					colour = G.C.RED,
+					card = card,
 				}
 			end
 		end
