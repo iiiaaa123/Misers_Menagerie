@@ -136,7 +136,7 @@ SMODS.Joker {
 			"if hand contains only {C:attention}Aces, 4s or 9s{}.",
 		"{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
 			"For some reason too, {X:mult,C:white} X#3# {} Mult when",
-			"an Ace of Spades is scored... {s:0.5}Why?{}",
+			"an {C:attention}Ace of Spades{} is scored... {s:0.5}Why?{}",
 		}
 	},
 	config = { extra = { chips = 0, chip_mod = 10, x_mult = 2} },
@@ -150,15 +150,18 @@ SMODS.Joker {
   	end,
 	calculate = function(self, card, context)
 		local check = true
-		if context.cardarea == G.play and context.individual and
-		context.other_card:is_suit('Spades') then
-			local rank = SMODS.Ranks[context.other_card.base.value].key
-			if rank == "14" then
-				return {
-					x_mult = card.ability.extra.x_mult,
-					colour = G.C.RED,
-					card = card,
-				}
+		if context.individual then
+			if context.cardarea == G.play then
+				if context.other_card:is_suit('Spades') then
+					local rank = SMODS.Ranks[context.other_card.base.value].key
+					if rank == "14" then
+						return {
+							x_mult = card.ability.extra.x_mult,
+							colour = G.C.RED,
+							card = card,
+						}
+					end
+				end
 			end
 		end
 	end,
