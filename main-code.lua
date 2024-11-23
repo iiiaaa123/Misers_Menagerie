@@ -228,7 +228,6 @@ SMODS.Joker {
 				end
 			end
 			if check then
-				mult = card.ability.extra.mult
 				return {
 					mult = card.ability.extra.mult,
 					colour = G.C.RED,
