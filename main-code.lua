@@ -197,7 +197,7 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Circloopa',
 		text = {
-			"{C:attention}+#1#{} Mult if hand",
+			"{C:mult}+#1#{} Mult if hand",
 			"contains only {C:attention}2s, 3s, 5s, 6s, 8s,{}",
 			"{C:attention}9s, 10s, Jacks or Queens.{}",
 			"{s:0.8}Why are all those numbers rou- Oh now I get it.{}",
@@ -229,7 +229,8 @@ SMODS.Joker {
 			end
 			if check then
 				return {
-					mult = card.ability.extra.mult,
+					mult_mod = card.ability.extra.mult,
+					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
 					colour = G.C.RED,
 					card = card,
 				}
