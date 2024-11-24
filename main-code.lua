@@ -224,7 +224,7 @@ SMODS.Joker {
 						or v:get_id() == 14
 					then
 						check = false,
-						print(guess you aint scoring)
+						print(guess you aint scoring),
 					end
 				end
 			end
