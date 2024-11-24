@@ -218,24 +218,22 @@ SMODS.Joker {
 			if context.scoring_hand then
 				for k, v in ipairs(context.full_hand) do
 					if
-						v:get_id() == 2
-						or v:get_id() == 3
-						or v:get_id() == 5
-						or v:get_id() == 6
-						or v:get_id() == 8
-						or v:get_id() == 9
-						or v:get_id() == 10
-						or v:get_id() == 11
-						or v:get_id() == 12
+						v:get_id() == 4
+						or v:get_id() == 7
+						or v:get_id() == 13
+						or v:get_id() == 14
 					then
-						mult_mod = card.ability.extra.mult
-						return {
-							message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-							colour = G.C.RED,
-							card = card,
-						}
+						check = false
 					end
 				end
+			end
+			if check then
+				mult_mod = card.ability.extra.mult
+				return {
+					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
+					colour = G.C.RED,
+					card = card,
+				}
 			end
 		end
 	end
