@@ -223,7 +223,7 @@ SMODS.Joker {
 						or v:get_id() == 13
 						or v:get_id() == 14
 					then
-						check = false,
+						check = false
 					end
 				end
 			end
