@@ -224,15 +224,18 @@ SMODS.Joker {
 						or v:get_id() == 14
 					then
 						check = false
+						print(guess you aint scoring)
 					end
 				end
 			end
 			if check then
-				mult_mod = card.ability.extra.mult
+				mult_mod = card.ability.extra.mult,
+				print(whoop you be scoring),
 				return {
 					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
 					colour = G.C.RED,
 					card = card,
+					print(oop message was done well i think)
 				}
 			end
 		end
