@@ -210,7 +210,7 @@ SMODS.Joker {
 	soul_pos = { x = 7, y = 0 },
 	cost = 4,
 	loc_vars = function(self, info_queue, card)
-    		return { vars = { card.ability.extra.mult } }
+    		return { vars = { card.ability.extra.mult_mod } }
   	end,
 	calculate = function(self, card, context)
 		local check = true
@@ -229,8 +229,8 @@ SMODS.Joker {
 			end
 			if check then
 				return {
-					mult_mod = card.ability.extra.mult,
-					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
+					mult_mod = card.ability.extra.mult_mod,
+					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_mod } },
 					colour = G.C.RED,
 					card = card,
 				}
