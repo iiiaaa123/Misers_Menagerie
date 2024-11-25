@@ -203,7 +203,7 @@ SMODS.Joker {
 			"{s:0.8}Why are all those numbers rou- Oh now I get it.{}",
 		}
 	},
-	config = { extra = { mult = 8 } },
+	config = { extra = { mult_mod = 8 } },
 	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 6, y = 0 },
