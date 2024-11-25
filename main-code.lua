@@ -231,6 +231,7 @@ SMODS.Joker {
 				if context.joker_main then
 					return {
 						mult_mod = card.ability.extra.mult,
+						-- WHY DOES THIS NOT WORK
 						message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
 						colour = G.C.RED,
 						card = card,
@@ -240,5 +241,6 @@ SMODS.Joker {
 		end
 	end
 }
+
 ----------------------------------------------
 ------------MOD CODE END----------------------
