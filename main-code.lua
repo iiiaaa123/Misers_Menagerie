@@ -228,12 +228,14 @@ SMODS.Joker {
 				end
 			end
 			if check then
-				return {
-					mult_mod = card.ability.extra.mult_mod,
-					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-					colour = G.C.RED,
-					card = card,
-				}
+				if context.joker_main then
+					return {
+						mult_mod = card.ability.extra.mult_mod,
+						message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
+						colour = G.C.RED,
+						card = card,
+					}
+				end
 			end
 		end
 	end
