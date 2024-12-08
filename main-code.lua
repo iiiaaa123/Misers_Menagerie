@@ -230,7 +230,7 @@ SMODS.Joker {
 			if check then
 				mult_mod = card.ability.extra.mult_mod
 				return {
-					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
+					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_mod } },
 					colour = G.C.RED,
 					card = card,
 				}
