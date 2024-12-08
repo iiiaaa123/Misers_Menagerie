@@ -215,21 +215,19 @@ SMODS.Joker {
 	calculate = function(self, card, context)
 		local check = true
 		if context.joker_main and not context.blueprint then
-			if context.scoring_hand then
-				for k, v in ipairs(context.full_hand) do
-					if
-						v:get_id() == 4
-						or v:get_id() == 7
-						or v:get_id() == 13
-						or v:get_id() == 14
-					then
-						check = false
-					end
+			for k, v in ipairs(context.full_hand) do
+				if
+					v:get_id() == 4
+					or v:get_id() == 7
+					or v:get_id() == 13
+					or v:get_id() == 14
+					check = false
+					break
 				end
 			end
 			if check then
 				mult_mod = card.ability.extra.mult
-				return {
+				retun {
 					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
 					colour = G.C.RED,
 					card = card,
@@ -237,6 +235,28 @@ SMODS.Joker {
 			end
 		end
 	end
+--			if context.scoring_hand then
+--				for k, v in ipairs(context.full_hand) do
+--					if
+--						v:get_id() == 4
+--						or v:get_id() == 7
+--						or v:get_id() == 13
+--						or v:get_id() == 14
+--					then
+--						check = false
+--					end
+--				end
+--			end
+--			if check then
+--				mult_mod = card.ability.extra.mult
+--				return {
+--					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
+--					colour = G.C.RED,
+--					card = card,
+--				}
+--			end
+--		end
+--	end
 }
 
 ----------------------------------------------
