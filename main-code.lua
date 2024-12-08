@@ -214,7 +214,7 @@ SMODS.Joker {
   	end,
 	calculate = function(self, card, context)
 		local check = true
-		if context.cardarea == G.jokers and context.joker_main and not context.blueprint then
+		if context.joker_main and not context.blueprint then
 			if context.scoring_hand then
 				for k, v in ipairs(context.full_hand) do
 					if
