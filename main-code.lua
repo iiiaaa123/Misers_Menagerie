@@ -203,14 +203,14 @@ SMODS.Joker {
 			"{s:0.8}Why are all those numbers rou- Oh now I get it.{}",
 		}
 	},
-	config = { extra = { mult_mod = 8 } },
+	config = { extra = { mult = 8 } },
 	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
 	pos = { x = 6, y = 0 },
 	soul_pos = { x = 7, y = 0 },
 	cost = 4,
 	loc_vars = function(self, info_queue, card)
-    		return { vars = { card.ability.extra.mult_mod } }
+    		return { vars = { card.ability.extra.mult } }
   	end,
 	calculate = function(self, card, context)
 		local check = true
@@ -228,9 +228,9 @@ SMODS.Joker {
 				end
 			end
 			if check then
-				mult_mod = card.ability.extra.mult_mod
+				mult_mod = card.ability.extra.mult
 				return {
-					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_mod } },
+					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
 					colour = G.C.RED,
 					card = card,
 				}
