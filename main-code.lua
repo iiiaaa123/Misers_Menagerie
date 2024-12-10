@@ -270,21 +270,25 @@ SMODS.Back {
 	pos = {x = 0, y = 0},
 	config = { standardspam = true },
 	cards = { },
-	apply = function() {
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-		add_tag(Tag('tag_standard')),
-	}
+	apply = function() 
+		G.E_MANAGER:add_event(Event({
+			func = function()
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard')),
+			end
+		}))
+	end
 }
 		
 ----------------------------------------------
