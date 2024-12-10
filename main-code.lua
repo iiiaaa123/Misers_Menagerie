@@ -271,8 +271,21 @@ SMODS.Back{
 	config = { 13_standards = true },
 	cards = { },
 	Back.apply(self) {
-		
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
+		add_tag(Tag('tag_standard')),
 	}
+}
 		
 ----------------------------------------------
 ------------MOD CODE END----------------------
