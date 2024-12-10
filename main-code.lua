@@ -273,19 +273,19 @@ SMODS.Back {
 	apply = function() 
 		G.E_MANAGER:add_event(Event({
 			func = function()
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
-				add_tag(Tag('tag_standard')),
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
+				add_tag(Tag('tag_standard'))
 			end
 		}))
 	end
