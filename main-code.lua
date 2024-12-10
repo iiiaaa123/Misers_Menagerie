@@ -293,7 +293,7 @@ SMODS.Back {
 				add_tag(Tag('tag_standard'))
 				add_tag(Tag('tag_standard'))
 				add_tag(Tag('tag_standard'))
-			end
+			return true; end
 		}))
 	end
 }
