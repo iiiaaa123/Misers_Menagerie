@@ -30,6 +30,13 @@ SMODS.Atlas({
 	py = 32,
 }):register()
 
+SMODS.Atlas{
+	key = "MisersMenagerieDecks",
+	path = "MisersMenagerieDecks.png",
+	px = 71,
+	py = 95
+}
+
 SMODS.Atlas {
   key = "MisersMenagerieJokers",
   path = "MisersMenagerieJokers.png",
