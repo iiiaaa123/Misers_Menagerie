@@ -298,7 +298,7 @@ SMODS.Back {
 		G.E_MANAGER:add_event(Event({
             		func = function()
                 	local i = 1
-                	while i < #G.playing_cards do
+                	while i <= #G.playing_cards do
                     		local v = G.playing_cards[i]
                     		if i >= 0 then
                         		v:remove()
