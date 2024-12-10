@@ -295,7 +295,21 @@ SMODS.Back {
 				add_tag(Tag('tag_standard'))
 			return true; end
 		}))
-	end
+		G.E_MANAGER:add_event(Event({
+            		func = function()
+                	local i = 1
+                	while i < #G.playing_cards do
+                    		local v = G.playing_cards[i]
+                    		if i >= 12 then
+                        		v:remove()
+                    		else
+                        		i = i + 1
+                    		end
+                	end
+                return true
+            end
+        }))
+    end
 }
 		
 ----------------------------------------------
