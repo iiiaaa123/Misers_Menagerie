@@ -236,29 +236,43 @@ SMODS.Joker {
 			end
 		end
 	end
---			if context.scoring_hand then
---				for k, v in ipairs(context.full_hand) do
---					if
---						v:get_id() == 4
---						or v:get_id() == 7
---						or v:get_id() == 13
---						or v:get_id() == 14
---					then
---						check = false
---					end
---				end
---			end
---			if check then
---				mult_mod = card.ability.extra.mult
---				return {
---					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
---					colour = G.C.RED,
---					card = card,
---				}
---			end
---		end
---	end
 }
 
+--SMODS.Joker {
+--	key = 'painty',
+--	loc_txt = {
+--		name = 'Painty'
+--		text = {
+--			"+{C:money}$#1#{} every time",
+--			"you open a {C:attention}Booster pack{}.",
+--			"{s:0.7} The old coin on a string trick...",
+--		}
+--	}
+--	config = { extra = { money = 3 } },
+--	rarity = 2,
+--	atlas = 'MisersMenagerieJokers',
+--	pos = { x = 8, y = 0 },
+--	soul_pos = { x = 9, y = 0 },
+--	cost = 7,
+--	
+--}
+
+SMODS.Back{
+	key = "buildadeck",
+	loc_txt = {
+		name ="Build-A-Deck",
+		text = {
+			"Start with an empty Deck",
+			"and {C:attention}13 Standard Tags{}",
+		},
+	},
+	atlas = 'MisersMenagerieDecks'
+	pos = {x = 0, y = 0},
+	config = { 13_standards = true },
+	cards = { },
+	Back.apply(self) {
+		
+	}
+		
 ----------------------------------------------
 ------------MOD CODE END----------------------
