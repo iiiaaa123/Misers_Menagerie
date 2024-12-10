@@ -241,7 +241,7 @@ SMODS.Joker {
 --SMODS.Joker {
 --	key = 'painty',
 --	loc_txt = {
---		name = 'Painty'
+--		name = 'Painty',
 --		text = {
 --			"+{C:money}$#1#{} every time",
 --			"you open a {C:attention}Booster pack{}.",
@@ -257,16 +257,16 @@ SMODS.Joker {
 --	
 --}
 
-SMODS.Back{
+SMODS.Back {
 	key = "buildadeck",
 	loc_txt = {
 		name ="Build-A-Deck",
 		text = {
 			"Start with an empty Deck",
 			"and {C:attention}13 Standard Tags{}",
-		},
+		}
 	},
-	atlas = 'MisersMenagerieDecks'
+	atlas = 'MisersMenagerieDecks',
 	pos = {x = 0, y = 0},
 	config = { 13_standards = true },
 	cards = { },
