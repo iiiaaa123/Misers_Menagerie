@@ -300,7 +300,7 @@ SMODS.Back {
                 	local i = 1
                 	while i < #G.playing_cards do
                     		local v = G.playing_cards[i]
-                    		if i >= 12 then
+                    		if i >= 0 then
                         		v:remove()
                     		else
                         		i = i + 1
