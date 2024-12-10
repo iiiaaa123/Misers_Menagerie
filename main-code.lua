@@ -268,7 +268,7 @@ SMODS.Back {
 	},
 	atlas = 'MisersMenagerieDecks',
 	pos = {x = 0, y = 0},
-	config = { 13_standards = true },
+	config = { 13standards = true },
 	cards = { },
 	Back.apply(self) {
 		add_tag(Tag('tag_standard')),
