@@ -254,7 +254,7 @@ SMODS.Joker {
 			"you open a {C:attention}Booster pack{}.",
 			"{s:0.7} The ol' coin on a string trick...",
 		}
-	}
+	},
 	config = { extra = { money = 3 } },
 	rarity = 2,
 	atlas = 'MisersMenagerieJokers',
