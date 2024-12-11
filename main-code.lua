@@ -245,24 +245,38 @@ SMODS.Joker {
 	end
 }
 
---SMODS.Joker {
---	key = 'painty',
---	loc_txt = {
---		name = 'Painty',
---		text = {
---			"+{C:money}$#1#{} every time",
---			"you open a {C:attention}Booster pack{}.",
---			"{s:0.7} The old coin on a string trick...",
---		}
---	}
---	config = { extra = { money = 3 } },
---	rarity = 2,
---	atlas = 'MisersMenagerieJokers',
---	pos = { x = 8, y = 0 },
---	soul_pos = { x = 9, y = 0 },
---	cost = 7,
---	
---}
+SMODS.Joker {
+	key = 'painty',
+	loc_txt = {
+		name = 'Painty',
+		text = {
+			"+{C:money}$#1#{} every time",
+			"you open a {C:attention}Booster pack{}.",
+			"{s:0.7} The ol' coin on a string trick...",
+		}
+	}
+	config = { extra = { money = 3 } },
+	rarity = 2,
+	atlas = 'MisersMenagerieJokers',
+	pos = { x = 8, y = 0 },
+	soul_pos = { x = 9, y = 0 },
+	cost = 7,
+	loc_vars = function(self, info_queue, card)
+    		return { vars = { card.ability.extra.money } }
+  	end,
+	calculate = function(self, card, context)
+		local check = true
+		if context.open_booster then
+			ease_dollars(card.ability.extra.money)
+			return{
+				card_eval_status_text(card, "extra", nil, nil, nil, {
+					message = "$" .. card.ability.extra.money,
+					colour = G.C.MONEY,
+				}),
+			}
+		end
+	end
+}
 
 SMODS.Back {
 	key = "buildadeck",
