@@ -285,16 +285,16 @@ SMODS.Joker {
 		text = {
 			"Does {C:attention}something extremely specific{}",
 			"{C:attention]and pretty much completely worthless{}",
-			"at the start of a blind.
+			"at the start of a blind.",
 			" ",
-			"{C:inactive}I can't think of a single situation where I'd need{}".
+			"{C:inactive}I can't think of a single situation where I'd need{}",
 			"{C:inactive}to use something so pointless. That's amazing, father!{}",
 		}
 	},
 	config = { extra = { } },
-	rarity = 1
+	rarity = 1,
 	atlas = 'MisersMenagerieJokers',
-	pos = { x = 0, y = 1}
+	pos = { x = 0, y = 1},
 	cost = 10,
 }
 
