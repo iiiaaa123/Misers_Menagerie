@@ -284,7 +284,7 @@ SMODS.Joker {
 		name = 'Extremely Specific and Pretty Much Completely Worthless Capsule Spell Machine',
 		text = {
 			"Does {C:attention}something extremely specific{}",
-			"{C:attention]and pretty much completely worthless{}",
+			"{C:attention}and pretty much completely worthless{}",
 			"at the start of a blind.",
 			" ",
 			"{C:inactive}I can't think of a single situation where I'd need{}",
