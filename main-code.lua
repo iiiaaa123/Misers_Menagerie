@@ -302,7 +302,7 @@ SMODS.Joker {
 SMODS.Back {
 	key = "buildadeck",
 	loc_txt = {
-		name ="Build-A-Deck",
+		name = "Build-A-Deck",
 		text = {
 			"Start with an empty Deck",
 			"and {C:attention}13 Standard Tags{}",
@@ -346,6 +346,23 @@ SMODS.Back {
         }))
     end
 }
-		
+
+SMODS.Consumable {
+	key = "wheelBUT",
+	set = 'Tarot',
+	loc_txt = {
+		name = "Wheel of Fortune*"
+		text = {
+		"{C:green}#1# in #2#{} chance to add",
+        	"{C:dark_edition}Foil{}, {C:dark_edition}Holographic{}, or",
+                "{C:dark_edition}Polychrome{} edition",
+                "to a random {C:attention}Joker",
+		"...",
+		"{s:0.5}And a {C:green}#1# in #2#{} chance to{}",
+		"{s:0.5}destroy a random joker.{}",
+		"{s:0.5}This is why you read the fine print!{}"
+		}
+	},
+	pos = {x = 0, y = 0},
 ----------------------------------------------
 ------------MOD CODE END----------------------
