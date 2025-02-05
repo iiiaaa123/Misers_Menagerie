@@ -134,71 +134,71 @@ SMODS.Joker {
 	end
 }
 
---SMODS.Joker {
---	key = 'loswig',
---	loc_txt = {
---		name = 'Loswig',
---		text = {
---			"This Joker gains {C:chips}+#2#{} Chips",
---			"if hand contains only {C:attention}Aces, 4s or 9s{}.",
---		"{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
---			"For some reason too, {X:mult,C:white} X#3# {} Mult when",
---			"an {C:attention}Ace of Spades{} is scored... {s:0.5}Why?{}",
---		}
---	},
---	config = { extra = { chips = 0, chip_mod = 10, x_mult = 2} },
---	rarity = 2,
---	atlas = 'MisersMenagerieJokers',
---	pos = { x = 4, y = 0 },
---	soul_pos = { x = 5, y = 0},
---	cost = 6,
---	loc_vars = function(self, info_queue, card)
---    		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
---  	end,
---	calculate = function(self, card, context)
---		local check = true
---		if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') then
---			if context.other_card:get_id() == 14 then
---				return {
---					x_mult = card.ability.extra.x_mult,
---					colour = G.C.RED,
---					card = card,
---				}
---			end
---		end
---		local check = true
---		if context.cardarea == G.jokers and context.before and not context.blueprint then
---			if context.scoring_hand then
---				for k, v in ipairs(context.full_hand) do
---					if
---						v:get_id() == 2
---						or v:get_id() == 3
---						or v:get_id() == 5
---						or v:get_id() == 6
---						or v:get_id() == 7
---						or v:get_id() == 8
---						or v:get_id() == 10
---						or v:get_id() == 11
---						or v:get_id() == 12
---						or v:get_id() == 13
---					then
---						check = false
---					end
---				end
---			end
---			if check then
---				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod,
---				return {
---					chip_mod = card.ability.extra.chips
---					card_eval_status_text(card, "extra", nil, nil, nil, {
---						message = localize("k_upgrade_ex"),
---						colour = G.C.CHIPS,
---					}),
---				}
---			end
---		end
---	end
---}
+SMODS.Joker {
+	key = 'loswig',
+	loc_txt = {
+		name = 'Loswig',
+		text = {
+			"This Joker gains {C:chips}+#2#{} Chips",
+			"if hand contains only {C:attention}Aces, 4s or 9s{}.",
+		"{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
+			"For some reason too, {X:mult,C:white} X#3# {} Mult when",
+			"an {C:attention}Ace of Spades{} is scored... {s:0.5}Why?{}",
+		}
+	},
+	config = { extra = { chips = 0, chip_mod = 10, x_mult = 2} },
+	rarity = 2,
+	atlas = 'MisersMenagerieJokers',
+	pos = { x = 4, y = 0 },
+	soul_pos = { x = 5, y = 0},
+	cost = 6,
+	loc_vars = function(self, info_queue, card)
+    		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
+  	end,
+	calculate = function(self, card, context)
+		local check = true
+		if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') then
+			if context.other_card:get_id() == 14 then
+				return {
+					x_mult = card.ability.extra.x_mult,
+					colour = G.C.RED,
+					card = card,
+				}
+			end
+		end
+		local check = true
+		if context.cardarea == G.jokers and context.before and not context.blueprint then
+			if context.scoring_hand then
+				for k, v in ipairs(context.full_hand) do
+					if
+						v:get_id() == 2
+						or v:get_id() == 3
+						or v:get_id() == 5
+						or v:get_id() == 6
+						or v:get_id() == 7
+						or v:get_id() == 8
+						or v:get_id() == 10
+						or v:get_id() == 11
+						or v:get_id() == 12
+						or v:get_id() == 13
+					then
+						check = false
+						break
+					end
+				end
+			if check then
+				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod,
+				return {
+					chip_mod = card.ability.extra.chips
+					card_eval_status_text(card, "extra", nil, nil, nil, {
+						message = localize("k_upgrade_ex"),
+						colour = G.C.CHIPS,
+					}),
+				}
+			end
+		end
+	end
+}
 
 SMODS.Joker {
 	key = 'circloopa',
@@ -286,7 +286,6 @@ SMODS.Joker {
 		text = {
 			"Does {C:attention}something extremely specific{}",
 			"{C:attention}and pretty much completely worthless{}",
-			"at the start of a blind.",
 			" ",
 			"{C:inactive}I can't think of a single situation where I'd need{}",
 			"{C:inactive}to use something so pointless. That's amazing, father!{}",
