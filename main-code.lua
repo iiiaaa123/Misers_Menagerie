@@ -155,49 +155,49 @@ SMODS.Joker {
 	loc_vars = function(self, info_queue, card)
     		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
   	end,
-	calculate = function(self, card, context)
-		local check = true
-		if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') then
-			if context.other_card:get_id() == 14 then
-				return {
-					x_mult = card.ability.extra.x_mult,
-					colour = G.C.RED,
-					card = card,
-				}
-			end
-		end
+--	calculate = function(self, card, context)
 --		local check = true
---		if context.cardarea == G.jokers and context.before and not context.blueprint then
---			if context.scoring_hand then
---				for k, v in ipairs(context.full_hand) do
---					if
---						v:get_id() == 2
---						or v:get_id() == 3
---						or v:get_id() == 5
---						or v:get_id() == 6
---						or v:get_id() == 7
---						or v:get_id() == 8
---						or v:get_id() == 10
---						or v:get_id() == 11
---						or v:get_id() == 12
---						or v:get_id() == 13
---					then
---						check = false
---						break
---					end
---				end
---			end,
---			if check then
---				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod,
+--		if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') then
+--			if context.other_card:get_id() == 14 then
 --				return {
---					chip_mod = card.ability.extra.chips,
---					card_eval_status_text(card, "extra", nil, nil, nil, {
---						message = localize("k_upgrade_ex"),
---						colour = G.C.CHIPS,
---					}),
+--					x_mult = card.ability.extra.x_mult,
+--					colour = G.C.RED,
+--					card = card,
 --				}
 --			end
 --		end
+		local check = true
+		if context.cardarea == G.jokers and context.before and not context.blueprint then
+			if context.scoring_hand then
+				for k, v in ipairs(context.full_hand) do
+					if
+						v:get_id() == 2
+						or v:get_id() == 3
+						or v:get_id() == 5
+						or v:get_id() == 6
+						or v:get_id() == 7
+						or v:get_id() == 8
+						or v:get_id() == 10
+						or v:get_id() == 11
+						or v:get_id() == 12
+						or v:get_id() == 13
+					then
+						check = false
+						break
+					end
+				end
+			end,
+			if check then
+				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod,
+				return {
+					chip_mod = card.ability.extra.chips,
+					card_eval_status_text(card, "extra", nil, nil, nil, {
+						message = localize("k_upgrade_ex"),
+						colour = G.C.CHIPS,
+					}),
+				}
+			end
+		end
 	end
 }
 
