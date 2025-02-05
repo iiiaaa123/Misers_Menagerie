@@ -186,7 +186,7 @@ SMODS.Joker {
 						break
 					end
 				end
-			end,
+			end
 			if check then
 				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod,
 				return {
