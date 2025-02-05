@@ -358,7 +358,7 @@ SMODS.Back {
 }
 
 SMODS.Consumable {
-	key = "wheelBUT",
+	key = 'wheelBUT',
 	set = 'Tarot',
 	loc_txt = {
 		name = "Wheel of Fortune*",
@@ -374,7 +374,7 @@ SMODS.Consumable {
 		}
 	},
 	atlas = 'Tarot',
-	pos = {x = 6, y = 5},
+	pos = { x = 6, y = 5 },
 	permaeternal = true,
 	cost = 3,
 	hidden = true,
