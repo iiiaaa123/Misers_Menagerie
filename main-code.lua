@@ -155,7 +155,7 @@ SMODS.Joker {
 	loc_vars = function(self, info_queue, card)
     		return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod, card.ability.extra.x_mult } }
   	end,
---	calculate = function(self, card, context)
+	calculate = function(self, card, context)
 --		local check = true
 --		if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') then
 --			if context.other_card:get_id() == 14 then
