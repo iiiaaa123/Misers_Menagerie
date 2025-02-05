@@ -44,6 +44,16 @@ SMODS.Atlas {
   py = 95
 }
 
+--thanks jen for this banger code
+local etref = Card.set_eternal
+function Card:set_eternal(e)
+	if ((self.config or {}).center or {}).permaeternal then
+		self.ability.eternal = true
+	else
+		etref(self, e)
+	end
+end
+
 SMODS.Joker {
 	key = 'vikram',
 	loc_txt = {
@@ -363,6 +373,12 @@ SMODS.Consumable {
 		"{s:0.5}This is why you read the fine print!{}"
 		}
 	},
-	pos = {x = 0, y = 0},
+	atlas = "Tarot"
+	pos = {x = 6, y = 5},
+	permaeternal = true,
+	cost = 3,
+	hidden = true,
+}
+	
 ----------------------------------------------
 ------------MOD CODE END----------------------
