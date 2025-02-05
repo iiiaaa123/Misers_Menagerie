@@ -373,7 +373,7 @@ SMODS.Consumable {
 		"{s:0.5}This is why you read the fine print!{}",
 		}
 	},
-	atlas = "Tarot",
+	atlas = 'Tarot',
 	pos = {x = 6, y = 5},
 	permaeternal = true,
 	cost = 3,
