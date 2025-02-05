@@ -189,7 +189,7 @@ SMODS.Joker {
 			if check then
 				card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod,
 				return {
-					chip_mod = card.ability.extra.chips
+					chip_mod = card.ability.extra.chips,
 					card_eval_status_text(card, "extra", nil, nil, nil, {
 						message = localize("k_upgrade_ex"),
 						colour = G.C.CHIPS,
