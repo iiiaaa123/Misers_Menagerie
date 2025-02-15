@@ -352,7 +352,7 @@ SMODS.Consumable {
 	key = 'wheelBUT',
 	set = 'Tarot',
 	loc_txt = {
-		name = "Wheel of Fortune*",
+		name = "Wheel of Fortune",
 		text = {
 			"{C:green}#1# in #2#{} chance to add",
         		"{C:dark_edition}Foil{}, {C:dark_edition}Holographic{}, or",
