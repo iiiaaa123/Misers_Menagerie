@@ -382,7 +382,7 @@ SMODS.Consumable {
 			"You've found the most useless card in this mod.",
 		}
 	},
-	config = { extra = { } }.
+	config = { extra = { } },
 	atlas = 'Tarot',
 	pos = { x = 7, y = 5 },
 	permaeternal = true,
