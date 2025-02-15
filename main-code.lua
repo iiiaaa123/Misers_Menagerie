@@ -366,6 +366,7 @@ SMODS.Consumable {
 		"{s:0.5}This is why you read the fine print!{}",
 		}
 	},
+	config = { extra = { extra = 4 } },
 	atlas = 'Tarot',
 	pos = { x = 6, y = 5 },
 	permaeternal = true,
