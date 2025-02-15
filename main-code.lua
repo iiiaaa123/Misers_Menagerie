@@ -377,15 +377,18 @@ SMODS.Consumable {
 	loc_txt = {
 		name = "...",
 		text = {
-			"Does nothing. Like... literally nothing."
-			"Yep. Nothing to be found here."
-			"You've found the most useless card in this mod."
+			"Does nothing. Like... literally nothing.",
+			"Yep. Nothing to be found here.",
+			"You've found the most useless card in this mod.",
 		}
 	},
 	config = { extra = { } }.
 	atlas = 'Tarot',
 	pos = { x = 7, y = 5 },
-	
+	permaeternal = true,
+	cost = 3,
+	hidden = true,
+}
 	
 ----------------------------------------------
 ------------MOD CODE END----------------------
