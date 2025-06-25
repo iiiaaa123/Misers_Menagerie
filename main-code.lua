@@ -385,7 +385,7 @@ SMODS.Consumable {
 	config = { extra = { } },
 	atlas = 'Tarot',
 	pos = { x = 7, y = 5 },
-	permaeternal = true,
+--	permaeternal = true,
 	cost = 3,
 	hidden = true,
 }
