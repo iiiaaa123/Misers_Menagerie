@@ -369,6 +369,24 @@ SMODS.Back {
 --	hidden = true,
 --}
 
+local nothingness = {
+	object_type = "Consumable",
+	atlas = 'Tarot',
+	loc_txt = {
+		name = "...",
+		text = {
+			"Does nothing. Like... literally nothing.",
+			"Yep. Nothing to be found here.",
+			"You've found the most useless card in this mod.",
+		}
+	},
+	key = 'nothingness',
+	pos = { x = 7, y = 5 },
+	config = { extra = { } },
+	cost = 3,
+	hidden = true
+}
+
 --SMODS.Consumable {
 --	key = 'nothingness',
 --	loc_txt = {
