@@ -372,6 +372,7 @@ SMODS.Back {
 local nothingness = {
 	object_type = "Consumable",
 	atlas = 'Tarot',
+	set = "Tarot",
 	loc_txt = {
 		name = "...",
 		text = {
