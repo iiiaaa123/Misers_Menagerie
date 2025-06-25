@@ -371,7 +371,7 @@ SMODS.Back {
 
 local nothingness = {
 	object_type = "Consumable",
-	atlas = 'Tarot',
+	atlas = "Tarot",
 	set = "Tarot",
 	loc_txt = {
 		name = "...",
@@ -381,7 +381,7 @@ local nothingness = {
 			"You've found the most useless card in this mod.",
 		}
 	},
-	key = 'nothingness',
+	key = "nothingness",
 	pos = { x = 7, y = 5 },
 	cost = 3,
 	hidden = true,
