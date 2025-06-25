@@ -386,6 +386,7 @@ local nothingness = {
 	config = { extra = { } },
 	cost = 3,
 	hidden = true,
+	can_use = false,
 }
 
 --SMODS.Consumable {
