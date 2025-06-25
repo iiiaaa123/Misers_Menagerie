@@ -202,51 +202,51 @@ SMODS.Joker {
 	end
 }
 
-SMODS.Joker {
-	key = 'circloopa',
-	loc_txt = {
-		name = 'Circloopa',
-		text = {
-			"{C:mult}+#1#{} Mult if hand",
-			"contains only {C:attention}2s, 3s, 5s, 6s, 8s,{}",
-			"{C:attention}9s, 10s, Jacks or Queens.{}",
-			"{s:0.8}Why are all those numbers rou- Oh now I get it.{}",
-		}
-	},
-	config = { extra = { mult = 8 } },
-	rarity = 1,
-	atlas = 'MisersMenagerieJokers',
-	pos = { x = 6, y = 0 },
-	soul_pos = { x = 7, y = 0 },
-	cost = 4,
-	loc_vars = function(self, info_queue, card)
-    		return { vars = { card.ability.extra.mult } }
-  	end,
-	calculate = function(self, card, context)
-		local check = true
-		if context.joker_main and not context.blueprint then
-			for k, v in ipairs(context.full_hand) do
-				if
-					v:get_id() == 4
-					or v:get_id() == 7
-					or v:get_id() == 13
-					or v:get_id() == 14
-				then
-					check = false
-					break
-				end
-			end
-			if check then
-				return {
-					mult_mod = card.ability.extra.mult,
-					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-					colour = G.C.RED,
-					card = card,
-				}
-			end
-		end
-	end
-}
+--SMODS.Joker {
+--	key = 'circloopa',
+--	loc_txt = {
+--		name = 'Circloopa',
+--		text = {
+--			"{C:mult}+#1#{} Mult if hand",
+--			"contains only {C:attention}2s, 3s, 5s, 6s, 8s,{}",
+--			"{C:attention}9s, 10s, Jacks or Queens.{}",
+--			"{s:0.8}Why are all those numbers rou- Oh now I get it.{}",
+--		}
+--	},
+--	config = { extra = { mult = 8 } },
+--	rarity = 1,
+--	atlas = 'MisersMenagerieJokers',
+--	pos = { x = 6, y = 0 },
+--	soul_pos = { x = 7, y = 0 },
+--	cost = 4,
+--	loc_vars = function(self, info_queue, card)
+--    		return { vars = { card.ability.extra.mult } }
+--  	end,
+--	calculate = function(self, card, context)
+--		local check = true
+--		if context.joker_main and not context.blueprint then
+--			for k, v in ipairs(context.full_hand) do
+--				if
+--					v:get_id() == 4
+--					or v:get_id() == 7
+--					or v:get_id() == 13
+--					or v:get_id() == 14
+--				then
+--					check = false
+--					break
+--				end
+--			end
+--			if check then
+--				return {
+--					mult_mod = card.ability.extra.mult,
+--					message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
+--					colour = G.C.RED,
+--					card = card,
+--				}
+--			end
+--		end
+--	end
+--}
 
 SMODS.Joker {
 	key = 'painty',
