@@ -365,7 +365,7 @@ SMODS.Consumable {
 	atlas = 'Tarot',
 	pos = { x = 6, y = 5 },
 	cost = 3,
-	hidden = true,
+	hidden = true
 }
 
 SMODS.Consumable {
@@ -384,7 +384,7 @@ SMODS.Consumable {
 	set = "Tarot",
 	cost = 3,
 	hidden = true,
-	card.ability.eternal = true,
+	card.ability.eternal = true
 }
 	
 ----------------------------------------------
