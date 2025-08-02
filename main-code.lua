@@ -370,6 +370,7 @@ SMODS.Consumable {
 
 SMODS.Consumable {
 	key = 'nothingness',
+	set = "Tarot",
 	loc_txt = {
 		name = "...",
 		text = {
@@ -381,7 +382,6 @@ SMODS.Consumable {
 	config = { extra = { } },
 	atlas = 'Tarot',
 	pos = { x = 7, y = 5 },
-	set = "Tarot",
 	cost = 3,
 	hidden = true,
 	card.ability.eternal = true
