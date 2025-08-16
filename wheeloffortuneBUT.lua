@@ -1,6 +1,7 @@
 SMODS.Consumable {
     key = 'wheeloffortuneBUT',
     set = 'Tarot',
+    atlas = 'Tarots',
     pos = { x = 0, y = 0 },
     config = { extra = {
         odds = 4,
