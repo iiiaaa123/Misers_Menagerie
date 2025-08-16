@@ -384,7 +384,6 @@ SMODS.Consumable {
 	pos = { x = 7, y = 5 },
 	cost = 3,
 	hidden = true,
-	card.ability.eternal = true
 }
 	
 ----------------------------------------------
