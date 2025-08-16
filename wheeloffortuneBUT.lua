@@ -2,7 +2,7 @@ SMODS.Consumable {
     key = 'wheeloffortuneBUT',
     set = 'Tarot',
     atlas = 'Tarots',
-    pos = { x = 0, y = 0 },
+    pos = { x = 6, y = 5 },
     config = { extra = {
         odds = 4,
         edition_amount = 1,
