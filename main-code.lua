@@ -346,29 +346,6 @@ SMODS.Back {
 }
 
 SMODS.Consumable {
-	key = 'wheelBUT',
-	set = 'Tarot',
-	loc_txt = {
-		name = "Wheel of Fortune*",
-		text = {
-			"{C:green}#1# in #2#{} chance to add",
-        		"{C:dark_edition}Foil{}, {C:dark_edition}Holographic{}, or",
-        	        "{C:dark_edition}Polychrome{} edition",
-        	        "to a random {C:attention}Joker",
-			"...",
-			"{s:0.45}and a {}{C:green,s:0.45} #1# in #2# {} {s:0.45}chance to{}",
-			"{s:0.5}destroy a random joker.{}",
-			"{s:0.5}This is why you read the fine print!{}",
-		}
-	},
-	config = { extra = { odds = 4 } },
-	atlas = 'Tarot',
-	pos = { x = 6, y = 5 },
-	cost = 3,
-	hidden = true
-}
-
-SMODS.Consumable {
 	key = 'nothingness',
 	set = "Tarot",
 	loc_txt = {
